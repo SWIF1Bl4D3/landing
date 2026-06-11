@@ -1187,19 +1187,60 @@ ul.nav > li > a.active{
 }
 
 /* ==========================================================================
-   OreGuide App Screenshot Carousel Responsiveness
+   OreGuide App Screenshot Carousel Responsiveness Fix
    ========================================================================== */
-.screenshots-section .swiper-container {
-    width: 100%;
-    max-width: 390px; /* Marginally increased size target on PC viewports */
-    margin: 0 auto;
-    position: relative;
+
+/* 1. Desktop & Laptop Viewports */
+@media (min-width: 992px) {
+    .screenshots-section .swiper-container {
+        max-width: 1170px !important; /* Lets the container stretch wide on PC screens */
+        width: 100%;
+        margin: 0 auto;
+    }
+    .swiper-container .screen {
+        width: 212px !important; /* Retains perfect theme proportions on desktop */
+        height: 376px !important;
+    }
 }
 
-.screenshots-section .swiper-slide img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain;
-    border-radius: 32px; /* Keeps corners clean inside the mockup frame */
-    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+/* 2. Mobile & Tablet Viewports */
+@media (max-width: 991px) {
+    .screenshots-section .swiper-container {
+        max-width: 285px !important; /* Sized perfectly to act as a single focused mobile window frame */
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 2rem 0 4rem 0 !important; /* Clean up excessive slide spacing */
+    }
+    
+    /* Ensure the single active slide occupies full container real estate */
+    .screenshots-section .swiper-slide {
+        width: 100% !important;
+        transform: none !important; /* Removes desktop scale distortion artifacts on mobile */
+        opacity: 1 !important;     /* Forces full image visibility */
+    }
+
+    /* Standardize frame container components to scale fluidly */
+    .screenshots-section .screen,
+    .screenshots-section .mobile-mock,
+    .screenshots-section .mobile-mock .screen {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+
+    /* Force your screenshots to fill the width of the container frame fully */
+    .screenshots-section .swiper-slide img {
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+        border-radius: 28px; /* Keeps your app edges round and modern */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* 3. Ultra-Compact Mobile Viewports */
+@media (max-width: 480px) {
+    .screenshots-section .swiper-container {
+        max-width: 245px !important; /* Gracefully shrinks the phone frame width on small screens */
+    }
 }
