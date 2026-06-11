@@ -174,20 +174,18 @@
 /* ---- End of max-width 380px CSS ---- */
 
 /* ==========================================================================
-   OreGuide App Screenshot Breakpoints 
+   Carousel Sizing Override Breakpoints
    ========================================================================== */
 @media (max-width: 1199px) {
     .screenshots-section .swiper-container {
-        max-width: 300px; /* Laptop / Small Desktop screens */
+        max-width: 300px; /* Laptops and smaller desktop monitors */
     }
 }
-
 @media (max-width: 991px) {
     .screenshots-section .swiper-container {
-        max-width: 280px; /* Tablets */
+        max-width: 280px; /* Tablet-sized viewports */
     }
 }
-
 @media (max-width: 767px) {
     .screenshots-section .swiper-container {
         max-width: 245px; /* Mobile devices */

@@ -524,13 +524,13 @@ ul.nav > li > a.active{
     bottom: -200px;
     right: 50px;
     animation-name: mock-animation;
-animation-duration: 2s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in-out;
--webkit-animation-name: mock-animation;
--webkit-animation-duration: 2s;
--webkit-animation-iteration-count: infinite;
--webkit-animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-name: mock-animation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
 }
 /*Mockup Animation*/
  @webkit-keyframes mock-animation {
@@ -801,66 +801,24 @@ animation-timing-function: ease-in-out;
     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .1), 0 2px 6px rgba(0, 0, 0, .03);
     box-shadow: 0 0 1px rgba(0, 0, 0, .1), 0 2px 6px rgba(0, 0, 0, .03);
 }
+
+/* White Device Frame Elements completely removed from behind sliders */
 .swiper-container .mobile-mock {
-    background: #fff;
-    border: 1px solid #edf4f8;
     margin: 0 auto;
-    position: absolute;
-    top: 0;
-    max-width: 240px;
-    left: 0;
-    right: 0;
-    width: 240px;
-    border-radius: 36px;
-    padding: 55px 0;
-    -webkit-box-shadow: inset 0 4px 10px 1px #fff, inset 0 0 6px 0 rgba(66, 77, 86, .5), 0 2px 0 #aeb5bb, 0 20px 50px -25px rgba(0, 0, 0, .5);
-    box-shadow: inset 0 4px 10px 1px #fff, inset 0 0 6px 0 rgba(66, 77, 86, .5), 0 2px 0 #aeb5bb, 0 20px 50px -25px rgba(0, 0, 0, .5)
+    width: 100%;
 }
 .swiper-container .mobile-mock:after,
 .swiper-container .mobile-mock:before {
-    content: '';
-    position: absolute
-}
-.swiper-container .mobile-mock:before {
-    width: 45px;
-    height: 4px;
-    background: #e3e8eb;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-    border-radius: 30px;
-    left: 0;
-    right: 0;
-    margin: -25px auto 0
-}
-.swiper-container .mobile-mock:after {
-    top: 30px;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    margin-left: -45px;
-    background: #e3e8eb;
-    -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, .03);
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, .03);
-    display: block;
-    border-radius: 50%
+    display: none !important;
 }
 .swiper-container .mobile-mock .screen {
-    width: 90%;
+    width: 100%;
     margin: 0 auto
 }
 .swiper-container .mobile-mock .circle {
-    position: absolute;
-    left: 50%;
-    -webkit-box-shadow: 0 0 1px 2px #e3e8eb inset;
-    box-shadow: 0 0 1px 2px #e3e8eb inset;
-    border: 1px solid #edf4f8;
-    border-radius: 50%;
-    bottom: 1.75%;
-    height: 0;
-    margin-left: -18px;
-    padding-top: 36px;
-    width: 36px
+    display: none !important;
 }
+
 .swiper-container .swiper-next,
 .swiper-container .swiper-prev{
     width: 30px;
@@ -1233,7 +1191,7 @@ animation-timing-function: ease-in-out;
    ========================================================================== */
 .screenshots-section .swiper-container {
     width: 100%;
-    max-width: 340px; /* Default optimized desktop width */
+    max-width: 390px; /* Marginally increased size target on PC viewports */
     margin: 0 auto;
     position: relative;
 }
