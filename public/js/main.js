@@ -91,18 +91,20 @@
 /*=========================================================================
     Screenshot Carousel
 =========================================================================*/
-    // 1. Auto-detect container name to support both older (v6-) and newer (v7+) Swiper versions
     var swiperSelector = $('.swiper').length > 0 ? '.swiper' : '.swiper-container';
 
     if ($(swiperSelector).length > 0) {
         var swiper = new Swiper(swiperSelector, {
-            // Baseline settings for Mobile Viewports (< 992px)
+            // Baseline settings for Mobile Viewports
             slidesPerView: 1,
             spaceBetween: 0,
             loop: true,
             centeredSlides: true,
             
-            // Safer configuration format for Autoplay across library versions
+            // Forces Swiper to dynamically watch CSS styles and yield to responsive.css
+            observer: true,
+            observeParents: true,
+            
             autoplay: {
                 delay: 3500,
                 disableOnInteraction: false,
@@ -113,10 +115,8 @@
                 prevEl: '.swiper-prev',
             },
             
-            // Forces older Swiper engines (v4) to interpret breakpoints as min-width (mobile-first)
             breakpointsInverse: true, 
             
-            // Desktop adjustments
             breakpoints: {
                 // When viewport width is >= 992px (Tablets / Laptops)
                 992: {
@@ -125,8 +125,8 @@
                 },
                 // When viewport width is >= 1200px (Large Screens)
                 1200: {
-                    slidesPerView: 5,
-                    spaceBetween: 20
+                    slidesPerView: 3, 
+                    spaceBetween: 40
                 }
             }
         });
@@ -138,7 +138,7 @@
     $('.img-popup').venobox({
         numeratio: true,
         infinigall: true
-    });                 
+    });                
               
 /*=========================================================================
     Initialize smoothscroll plugin
