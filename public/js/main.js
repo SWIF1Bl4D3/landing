@@ -185,3 +185,27 @@
     };   
 
 })(jQuery);
+
+// Locate your screenshots slider initialization and update it to match this:
+var screenshotSwiper = new Swiper('.screenshots-section .swiper-container', {
+    slidesPerView: 1, // Default constraint for mobile screens
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+    },
+    // Add breakpoints configuration below to manage PC sizing
+    breakpoints: {
+        // When screen width is >= 576px (Tablets)
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        // When screen width is >= 992px (PC/Laptops)
+        992: {
+            slidesPerView: 4,   // Shows 4 screenshot columns side-by-side
+            spaceBetween: 30    // Adds clean breathing room spacing between them
+        }
+    }
+});
