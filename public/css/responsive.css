@@ -191,24 +191,37 @@
 /* ==========================================================================
    Carousel Sizing Override Breakpoints
    ========================================================================== */
-@media (max-width: 1199px) {
+@media (min-width: 992px) {
+    /* Expand container on desktops so multiple slides can sit safely side-by-side */
     .screenshots-section .swiper-container {
-        max-width: 300px;
+        max-width: 960px !important; 
+        width: 100%;
     }
 }
+
 @media (max-width: 991px) {
+    /* Sized perfectly to frame 1 active slide on mobile/tablet profiles */
     .screenshots-section .swiper-container {
-        max-width: 270px;
+        max-width: 270px !important;
+        width: 100%;
+        margin: 0 auto;
     }
     .screenshots-section .mobile-mock {
-        max-width: 270px;
+        max-width: 270px !important;
+        width: 100%;
+    }
+    /* Ensure the individual image stretches fully across the 270px width frame */
+    .screenshots-section .swiper-slide img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain;
     }
 }
-@media (max-width: 767px) {
-    .screenshots-section .swiper-container {
-        max-width: 245px; /* Scales smoothly downward on compact screens */
-    }
+
+@media (max-width: 480px) {
+    /* Smooth down-scaling for ultra-compact mobile screens */
+    .screenshots-section .swiper-container,
     .screenshots-section .mobile-mock {
-        max-width: 245px;
+        max-width: 245px !important;
     }
 }

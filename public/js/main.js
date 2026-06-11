@@ -92,8 +92,8 @@
     Screenshot Carousel
 =========================================================================*/
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1, // Base configuration: 1 focused slide on mobile devices
-        spaceBetween: 0,  // Removes gaps so the image fits snugly into the mockup frame
+        slidesPerView: 1,      // Crucial: Show exactly 1 slide on mobile viewports
+        spaceBetween: 0,       // Eliminates slide gaps so the screenshot sits clean inside the frame
         loop: true,
         autoplay: true,
         centeredSlides: true,
@@ -101,20 +101,19 @@
             nextEl: '.swiper-next',
             prevEl: '.swiper-prev',
         },
-        // Native responsive adjustments replacing old window width calculations
         breakpoints: {
-            // When viewport width is >= 768px (Tablets)
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 20
+            // When viewport width is >= 992px (Desktop monitors)
+            992: {
+                slidesPerView: 3,  // Show side-by-side screenshots only on desktop screens
+                spaceBetween: 30
             },
-            // When viewport width is >= 1170px (Desktops)
-            1170: {
+            // When viewport width is >= 1200px (Large screens)
+            1200: {
                 slidesPerView: 5,
                 spaceBetween: 20
             }
         }
-    });  
+    });
              
 /*=========================================================================
     Active venobox
