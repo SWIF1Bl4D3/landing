@@ -1227,3 +1227,21 @@ animation-timing-function: ease-in-out;
         top: 70px;
     }
 }
+
+/* ==========================================================================
+   OreGuide App Screenshot Carousel Responsiveness
+   ========================================================================== */
+.screenshots-section .swiper-container {
+    width: 100%;
+    max-width: 340px; /* Default optimized desktop width */
+    margin: 0 auto;
+    position: relative;
+}
+
+.screenshots-section .swiper-slide img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 32px; /* Keeps corners clean inside the mockup frame */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
