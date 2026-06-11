@@ -44,11 +44,24 @@
         display: none;
     }
     .swiper-container{
-        width: 260px;
+        width: 100%;
+        max-width: 270px; /* Matches device frame dimensions */
+        margin: 0 auto;
     }
     .swiper-container .swiper-slide{ text-align: center; }
     .swiper-container .swiper-slide img,
-    .swiper-container .swiper-slide-active img{ width: 80%!important; }
+    .swiper-container .swiper-slide-active img{ 
+        width: 100%!important; 
+        height: 100%!important;
+        object-fit: cover;
+    }
+    .mobile-mock {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 270 / 480; /* Maintains frame aspect ratio */
+        max-width: 270px;
+        margin: 0 auto;
+    }
     .swiper-container .swiper-next, 
     .swiper-container .swiper-prev{ display: none; }
     .content-info{
@@ -61,6 +74,9 @@
     .download-btn a{
         margin: 0 5px;
     }
+    .download-btn a img{
+        max-width: 130px;
+    }
     .download-content h2{
         font-size: 24px;
     }
@@ -70,14 +86,13 @@
     .hero-section{
         height: 570px;
     }
-
 }
 /* ---- End of max-width 992px CSS ---- */
 
 
 /* ---- Start of min-width 480px and max-width 768px CSS ---- */
 @media all and (min-width: 480px) and (max-width: 768px) {
-	
+    
 }
 /* ---- End of min-width 480px and max-width 768px CSS ---- */
 
@@ -107,7 +122,7 @@
     }
     .promo-section{ padding-top: 0; }
     .xs-padding{
-    	padding: 15px;
+        padding: 15px;
     }
     .section-heading h2{
         font-size: 30px;
@@ -169,25 +184,43 @@
 
 /* ---- Start of max-width 380px CSS ---- */
 @media all and (max-width: 380px) {
-	
+    
 }
 /* ---- End of max-width 380px CSS ---- */
 
 /* ==========================================================================
-   Carousel Sizing Override Breakpoints
+   OreGuide Mobile Carousel Lock (Place at absolute bottom of responsive.css)
    ========================================================================== */
-@media (max-width: 1199px) {
-    .screenshots-section .swiper-container {
-        max-width: 300px; /* Laptops and smaller desktop monitors */
-    }
-}
 @media (max-width: 991px) {
-    .screenshots-section .swiper-container {
-        max-width: 280px; /* Tablet-sized viewports */
+    /* 1. Force the carousel frame to stay wide */
+    .screenshots-section .swiper-container,
+    #screenshot-carousel {
+        max-width: 85% !important; 
+        width: 85% !important;
+        margin: 0 auto !important;
     }
-}
-@media (max-width: 767px) {
-    .screenshots-section .swiper-container {
-        max-width: 245px; /* Mobile devices */
+
+    /* 2. CRITICAL: Break Swiper's inline JS pixel-width injections */
+    .screenshots-section .swiper-wrapper .swiper-slide {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 3. Strip structural constraints from theme frame mockups */
+    .screenshots-section .screen,
+    .screenshots-section .mobile-mock {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 4. Ensure the actual images scale up seamlessly */
+    .screenshots-section .swiper-slide img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        border-radius: 24px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
     }
 }

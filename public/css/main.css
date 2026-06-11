@@ -1187,19 +1187,57 @@ ul.nav > li > a.active{
 }
 
 /* ==========================================================================
-   OreGuide App Screenshot Carousel Responsiveness
+   OreGuide App Screenshot Carousel Responsiveness Fix
    ========================================================================== */
-.screenshots-section .swiper-container {
-    width: 100%;
-    max-width: 390px; /* Marginally increased size target on PC viewports */
-    margin: 0 auto;
-    position: relative;
+
+/* 1. Desktop & Laptop Viewports */
+@media (min-width: 992px) {
+    .screenshots-section .swiper-container {
+        max-width: 1170px !important; /* Lets the container stretch wide on PC screens */
+        width: 100%;
+        margin: 0 auto;
+    }
+    .swiper-container .screen {
+        width: 212px !important; /* Retains perfect theme proportions on desktop */
+        height: 376px !important;
+    }
 }
 
-.screenshots-section .swiper-slide img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain;
-    border-radius: 32px; /* Keeps corners clean inside the mockup frame */
-    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+/* ==========================================================================
+   Mobile Screenshot Expansion Override
+   ========================================================================== */
+@media (max-width: 991px) {
+    /* 1. Force the outer carousel container to take up 85% of the phone's screen width */
+    .screenshots-section .swiper-container,
+    #screenshot-carousel {
+        max-width: 85% !important; 
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 15px 0 30px 0 !important;
+    }
+
+    /* 2. Strip away any hardcoded pixel widths on the inner slide structure */
+    .screenshots-section .swiper-slide,
+    .screenshots-section .screen,
+    .screenshots-section .mobile-mock {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 3. Scale the actual screenshot image to fill the expanded container */
+    .screenshots-section .swiper-slide img {
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+        border-radius: 24px; /* Sleek, modern corner rounding for mobile UI frames */
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25); /* Adds clean depth separating it from the background */
+    }
+}
+
+/* 3. Ultra-Compact Mobile Viewports */
+@media (max-width: 480px) {
+    .screenshots-section .swiper-container {
+        max-width: 245px !important; /* Gracefully shrinks the phone frame width on small screens */
+    }
 }

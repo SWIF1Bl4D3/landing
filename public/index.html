@@ -48,7 +48,6 @@
                 color: #fff;
             }
 
-            /* --- REPLACE FROM HERE --- */
             /* Responsive Slider Screenshot Constraints */
             .screenshots-section .swiper-container {
                 width: 100%;
@@ -59,28 +58,25 @@
             /* Mobile View overrides (keeps your mobile layout pristine) */
             @media (max-width: 991px) {
                 .screenshots-section .swiper-container {
-                    max-width: 260px;
+                    max-width: 320px; /* ADJUSTED: Increased from 260px to make screenshots larger on mobile viewports */
                 }
             }
 
             /* PC/Desktop View updates */
-            @media (min-width: 992px) {
-                .screenshots-section .swiper-container {
-                    max-width: 1140px; /* Allows the carousel to stretch full-width on PC */
-                }
-                .screenshots-section .mobile-mock {
-                    display: none !important; /* Hides the white phone graphic container on PC */
-                }
-            }
-
-            .screenshots-section .swiper-slide img {
-                width: 100% !important;
-                height: auto !important;
-                object-fit: contain;
-                border-radius: 28px;
-                box-shadow: 0 12px 24px rgba(0,0,0,0.18);
-            }
-            /* --- TO HERE --- */
+@media (min-width: 992px) {
+    .screenshots-section .swiper-container {
+        width: 100% !important;  /* CRITICAL: Overrides the template's fixed mobile width */
+        max-width: 1140px;       /* Allows the carousel to stretch beautifully on wide screens */
+        margin: 0 auto;
+    }
+    .screenshots-section .mobile-mock {
+        display: none !important; /* Hides the white phone graphic container on PC */
+    }
+    /* Safe fallback: ensures slides maintain a crisp mobile aspect ratio on desktop */
+    .screenshots-section .swiper-slide {
+        width: 260px !important;  /* Sets a clean, standard width per phone screenshot column */
+    }
+}
         </style>
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
