@@ -48,7 +48,6 @@
                 color: #fff;
             }
 
-            /* --- REPLACE FROM HERE --- */
             /* Responsive Slider Screenshot Constraints */
             .screenshots-section .swiper-container {
                 width: 100%;
@@ -80,7 +79,34 @@
                 border-radius: 28px;
                 box-shadow: 0 12px 24px rgba(0,0,0,0.18);
             }
-            /* --- TO HERE --- */
+
+            /* Dedicated Theme Download Button Styles */
+            .theme-download-btn {
+                display: inline-flex;
+                align-items: center;
+                background-color: #D35400;
+                color: #ffffff !important;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 14px 36px;
+                border-radius: 50px;
+                box-shadow: 0 4px 15px rgba(211, 84, 0, 0.3);
+                transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+                text-decoration: none !important;
+                letter-spacing: 0.2px;
+            }
+            .theme-download-btn i {
+                font-size: 18px;
+                margin-right: 10px;
+            }
+            .theme-download-btn:hover {
+                background-color: #E67E22;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(211, 84, 0, 0.45);
+            }
+            .theme-download-btn:active {
+                transform: translateY(0);
+            }
         </style>
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -118,9 +144,10 @@
                         <div class="hero-content">
                             <h1>From Rock to<br>Resource in Seconds</h1>
                             <p>OreGuide uses AI-powered image recognition to identify ore samples on the spot. Point your camera, capture the sample, and instantly discover the geology behind what you're holding.</p>
-                            <div class="hero-btn">
-                                <a href="#" class="download-btn"><img src="img/appstore.png" alt="Download on the App Store"></a>
-                                <a href="#" class="download-btn"><img src="img/playstore.png" alt="Get it on Google Play"></a>
+                            <div class="hero-btn" style="margin-top: 30px;">
+                                <a href="https://drive.google.com/file/d/1FYolLJxbwi5sZS1yEMKXWVnx6Re85aim/view?usp=drive_link" target="_blank" class="theme-download-btn">
+                                    <i class="fa fa-download"></i> Download App
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -286,8 +313,11 @@
                         <div class="download-content">
                             <h2>Start Identifying Ores Today</h2>
                             <p>OreGuide is completely free. Download it now and bring expert geological knowledge to your fingertips — whether you're in the field, the lab, or the classroom.</p>
-                            <a class="download-btn" href="#"><img src="img/appstore.png" alt="Download on the App Store"></a>
-                            <a class="download-btn" href="#"><img src="img/playstore.png" alt="Get it on Google Play"></a>
+                            <div style="margin-top: 25px;">
+                                <a href="https://drive.google.com/file/d/1FYolLJxbwi5sZS1yEMKXWVnx6Re85aim/view?usp=drive_link" target="_blank" class="theme-download-btn">
+                                    <i class="fa fa-download"></i> Download App
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="download-mockup"></div>
