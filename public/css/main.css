@@ -1203,38 +1203,35 @@ ul.nav > li > a.active{
     }
 }
 
-/* 2. Mobile & Tablet Viewports */
+/* ==========================================================================
+   Mobile Screenshot Expansion Override
+   ========================================================================== */
 @media (max-width: 991px) {
-    .screenshots-section .swiper-container {
-        max-width: 285px !important; /* Sized perfectly to act as a single focused mobile window frame */
+    /* 1. Force the outer carousel container to take up 85% of the phone's screen width */
+    .screenshots-section .swiper-container,
+    #screenshot-carousel {
+        max-width: 85% !important; 
         width: 100% !important;
         margin: 0 auto !important;
-        padding: 2rem 0 4rem 0 !important; /* Clean up excessive slide spacing */
-    }
-    
-    /* Ensure the single active slide occupies full container real estate */
-    .screenshots-section .swiper-slide {
-        width: 100% !important;
-        transform: none !important; /* Removes desktop scale distortion artifacts on mobile */
-        opacity: 1 !important;     /* Forces full image visibility */
+        padding: 15px 0 30px 0 !important;
     }
 
-    /* Standardize frame container components to scale fluidly */
+    /* 2. Strip away any hardcoded pixel widths on the inner slide structure */
+    .screenshots-section .swiper-slide,
     .screenshots-section .screen,
-    .screenshots-section .mobile-mock,
-    .screenshots-section .mobile-mock .screen {
+    .screenshots-section .mobile-mock {
         width: 100% !important;
-        height: auto !important;
         max-width: 100% !important;
+        height: auto !important;
     }
 
-    /* Force your screenshots to fill the width of the container frame fully */
+    /* 3. Scale the actual screenshot image to fill the expanded container */
     .screenshots-section .swiper-slide img {
         width: 100% !important;
         height: auto !important;
         display: block;
-        border-radius: 28px; /* Keeps your app edges round and modern */
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        border-radius: 24px; /* Sleek, modern corner rounding for mobile UI frames */
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25); /* Adds clean depth separating it from the background */
     }
 }
 
