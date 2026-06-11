@@ -172,3 +172,24 @@
 	
 }
 /* ---- End of max-width 380px CSS ---- */
+
+/* ==========================================================================
+   OreGuide App Screenshot Breakpoints 
+   ========================================================================== */
+@media (max-width: 1199px) {
+    .screenshots-section .swiper-container {
+        max-width: 300px; /* Laptop / Small Desktop screens */
+    }
+}
+
+@media (max-width: 991px) {
+    .screenshots-section .swiper-container {
+        max-width: 280px; /* Tablets */
+    }
+}
+
+@media (max-width: 767px) {
+    .screenshots-section .swiper-container {
+        max-width: 245px; /* Mobile devices */
+    }
+}
