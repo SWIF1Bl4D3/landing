@@ -1163,31 +1163,3 @@ animation-timing-function: ease-in-out;
     background-color: #0bbf6c;
     color: #fff;
 }
-
-/* Container to make sure the video is visible and centered */
-.hero-video-container {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    max-width: 340px; /* Restricts the phone mockup from getting massive */
-    margin: 0 auto;
-    z-index: 10;
-}
-
-/* Force the video element to obey its parent container sizing */
-.mockup-video {
-    width: 100% !important;
-    height: auto !important;
-    display: block;
-    border-radius: 36px; /* Mimics smartphone screen curves */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    background-color: #000; /* Dark background if video delays loading */
-}
-
-/* Fix any template-level overrides interfering with the hero heights */
-.hero-inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    min-height: 550px;
-}
