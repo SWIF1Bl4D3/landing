@@ -1210,3 +1210,50 @@ ul.nav > li > a.active{
     object-fit: contain;
     border-radius: 16px; /* Perfectly aligns content inside rounded screens */
 }
+
+/* ==========================================================================
+   OreGuide Custom Screenshot Fixes 
+   ========================================================================== */
+
+.app-screenshots-slider {
+    width: 100%;
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Force a realistic mobile phone size on Desktop/PC screens */
+@media (min-width: 992px) {
+    .app-screenshots-slider {
+        max-width: 360px; /* Shrinks the slider to standard phone width */
+        margin: 0 auto;   /* Centers it perfectly on your orange background */
+    }
+    
+    /* Move navigation arrows outside of the tiny phone frame so they remain easy to click */
+    .app-screenshots-slider .swiper-next {
+        right: -60px !important;
+    }
+    .app-screenshots-slider .swiper-prev {
+        left: -60px !important;
+    }
+}
+
+/* Elegant, dark hardware mockup frame around each screenshot */
+.phone-mockup {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    border: 12px solid #1a1a1a; /* Sleek phone bezel */
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    background: #000;
+    aspect-ratio: 9 / 16; /* Keeps mobile layout proportions pristine */
+}
+
+.phone-mockup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
