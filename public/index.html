@@ -55,20 +55,34 @@
                 position: relative;
             }
 
-            /* Mobile View overrides (keeps your mobile layout pristine) */
+            /* Restored layout styling for mobile frame wrapper integration */
+            .screenshots-section .mobile-mock {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10;
+                pointer-events: none;
+                width: 100%;
+                max-width: 275px;
+                height: 100%;
+                background: url('img/mockup.png') no-repeat center center;
+                background-size: contain;
+            }
+
+            /* Responsive rules balancing desktop vs mobile slider scales */
             @media (max-width: 991px) {
                 .screenshots-section .swiper-container {
                     max-width: 260px;
                 }
             }
 
-            /* PC/Desktop View updates */
             @media (min-width: 992px) {
                 .screenshots-section .swiper-container {
-                    max-width: 1140px; /* Allows the carousel to stretch full-width on PC */
+                    max-width: 1000px;
                 }
                 .screenshots-section .mobile-mock {
-                    display: none !important; /* Hides the white phone graphic container on PC */
+                    display: block !important;
                 }
             }
 
@@ -234,39 +248,43 @@
                     <h2 class="text-white">App Screenshots</h2>
                     <p class="text-white">A clean, intuitive interface designed for geologists, students, and mineral enthusiasts across Namibia.</p>
                 </div>
-                <div class="swiper-container">
-                    <div class="mobile-mock">
-                        <div class="screen"></div>
-                        <div class="circle"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="swiper-container">
+                            <div class="mobile-mock">
+                                <div class="screen"></div>
+                                <div class="circle"></div>
+                            </div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="w-100" src="img/homescreen.jpg" alt="OreGuide – Home Screen">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="w-100" src="img/scanpage.jpg" alt="OreGuide – Ore Detection">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="w-100" src="img/quartz-page.jpg" alt="OreGuide – Ore Profile">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="w-100" src="img/learning-page.jpg" alt="OreGuide – Learning Page">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="w-100" src="img/map-page.jpg" alt="OreGuide – Map View">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="w-100" src="img/favourite-page.jpg" alt="OreGuide – Saved Ores">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="w-100" src="img/scan-resultpage.jpg" alt="OreGuide – Search">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="w-100" src="img/baryte-page.jpg" alt="OreGuide – Settings">
+                                </div>
+                            </div>
+                            <div class="swiper-next"><i class="arrow_carrot-right"></i></div>
+                            <div class="swiper-prev"><i class="arrow_carrot-left"></i></div>
+                        </div>
                     </div>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img class="w-100" src="img/homescreen.jpg" alt="OreGuide – Home Screen">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="w-100" src="img/scanpage.jpg" alt="OreGuide – Ore Detection">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="w-100" src="img/quartz-page.jpg" alt="OreGuide – Ore Profile">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="w-100" src="img/learning-page.jpg" alt="OreGuide – Learning Page">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="w-100" src="img/map-page.jpg" alt="OreGuide – Map View">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="w-100" src="img/favourite-page.jpg" alt="OreGuide – Saved Ores">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="w-100" src="img/scan-resultpage.jpg" alt="OreGuide – Search">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="w-100" src="img/baryte-page.jpg" alt="OreGuide – Settings">
-                        </div>
-                    </div>
-                    <div class="swiper-next"><i class="arrow_carrot-right"></i></div>
-                    <div class="swiper-prev"><i class="arrow_carrot-left"></i></div>
                 </div>
             </div>
         </section><section id="reviews" class="testimonial-section padding">
