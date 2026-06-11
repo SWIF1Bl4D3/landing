@@ -1,8 +1,8 @@
 /* Appium By IconicThemes */
 
-/*  ==========================================================================
+/* ==========================================================================
     Table of Contets
-    ==========================================================================
+    ========================================================================== 
     
     1.0 Common Styles
     2.0 Header Section
@@ -24,14 +24,14 @@
     Appium App Landing Page
     ========================================================================== */
 
-	@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');
-	
-/*  ==========================================================================
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');
+    
+/* ==========================================================================
     Common Styles
     ========================================================================== */
 *{
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 body{
     background-color: #fff;
@@ -47,7 +47,7 @@ body{
 h1, h2, h3, h4, h5, h6{
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing:antialiased;
-	color: #222;
+    color: #222;
 }
 h1{
     font-size: 52px;
@@ -131,7 +131,7 @@ textarea:-ms-input-placeholder{
 }
 button{
     border: none;
-	background: none;
+    background: none;
 }
 /* Helper Class */
 .padding{
@@ -372,7 +372,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     font-family: 'Poppins', sans-serif;
     letter-spacing: -1px;
     font-weight: 600;
-	margin-left: 13px;
+    margin-left: 13px;
 }
 .navbar-header .nav-btn{
     padding: 8px;
@@ -474,8 +474,8 @@ ul.nav > li > a.active{
 }
 
 /* ==========================================================================
-   Hero Section
-   ========================================================================== */
+    Hero Section
+    ========================================================================== */
 .hero-section{
     background-color: #fff;
     height: 700px;
@@ -533,7 +533,7 @@ animation-timing-function: ease-in-out;
 -webkit-animation-timing-function: linear;
 }
 /*Mockup Animation*/
- @-webkit-keyframes mock-animation {
+ @webkit-keyframes mock-animation {
      0% {
          -webkit-transform: translateY(-20px);
          transform: translateY(-20px);
@@ -562,8 +562,8 @@ animation-timing-function: ease-in-out;
     }
 }
 /* ==========================================================================
-   Promo Section
-   ========================================================================== */
+    Promo Section
+    ========================================================================== */
 .promo-section{
     padding-top: 0;
     position: relative;
@@ -598,8 +598,8 @@ animation-timing-function: ease-in-out;
     margin: 0;
 }
 /* ==========================================================================
-   Video Section
-   ========================================================================== */
+    Video Section
+    ========================================================================== */
 .video-section{
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
@@ -689,8 +689,8 @@ animation-timing-function: ease-in-out;
 }
 
 /* ==========================================================================
-   Feature Section
-   ========================================================================== */
+    Feature Section
+    ========================================================================== */
 .feature-section{
     position: relative;
     overflow: hidden;
@@ -739,32 +739,32 @@ animation-timing-function: ease-in-out;
 }
 .owl-nav{}
 .owl-nav div{
-	display: block;
+    display: block;
     background-image: linear-gradient(-45deg, #D35400 50%, #922B00 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	font-size: 35px;
-	position: absolute;
-	left: -40px;
-	top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 35px;
+    position: absolute;
+    left: -40px;
+    top: calc(50% - 20px);
     text-align: left;
     opacity: 0.8;
-	transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
 .owl-nav div.owl-next{
     left: auto;
-	right: -40px;
+    right: -40px;
     text-align: right;
 }
 .owl-nav div:hover{
     opacity: 1;
 }
 /* ==========================================================================
-   Screenshots Section
-   ========================================================================== */
+    Screenshots Section
+    ========================================================================== */
 .screenshots-section{
     background: linear-gradient(-45deg, #D35400 50%, #922B00 100%);
     padding-bottom: 53px;
@@ -792,7 +792,7 @@ animation-timing-function: ease-in-out;
 .swiper-container .swiper-slide-active{
     opacity: 1;
     transform: scale(1);
-     z-index: 100;
+    z-index: 100;
 }
 .swiper-container .screen{
     width: 212px;
@@ -1162,4 +1162,68 @@ animation-timing-function: ease-in-out;
 #scroll-to-top:hover{
     background-color: #0bbf6c;
     color: #fff;
+}
+
+/* Base static holder style for desktop */
+.hero-static-holder {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+/* Fix any template-level overrides interfering with the hero heights */
+.hero-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 550px;
+}
+
+/* ==========================================================================
+   Mobile Optimization Overrides (Safe Additions)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .hero-section {
+        height: auto !important;
+        padding: 120px 0 60px 0;
+        display: block;
+    }
+    .hero-section:before {
+        display: none; /* Removes giant decorative wave that breaks mobile layout width */
+    }
+    h1 {
+        font-size: 34px !important;
+        letter-spacing: -1px !important;
+        text-align: center;
+    }
+    .hero-content p {
+        text-align: center;
+        font-size: 16px;
+    }
+    .btn_group_left {
+        text-align: center;
+    }
+    .hero-static-holder {
+        margin-top: 40px !important;
+    }
+    .padding {
+        padding: 60px 0;
+    }
+    .subscribe-form {
+        width: 100%;
+        max-width: 100%;
+    }
+    .download-section {
+        padding: 60px 20px;
+    }
+    .download-mockup {
+        display: none;
+    }
+    .slicknav_menu {
+        display: block;
+        top: 70px;
+    }
 }
