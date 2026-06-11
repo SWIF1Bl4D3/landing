@@ -8,22 +8,22 @@
     });
              
 /*=========================================================================
-	Sticky Header
+    Sticky Header
 =========================================================================*/ 
-	$(function() {
-		var header = $("#header"),
-			yOffset = 0,
-			triggerPoint = 80;
-		$(window).on( 'scroll', function() {
-			yOffset = $(window).scrollTop();
+    $(function() {
+        var header = $("#header"),
+            yOffset = 0,
+            triggerPoint = 80;
+        $(window).on( 'scroll', function() {
+            yOffset = $(window).scrollTop();
 
-			if (yOffset >= triggerPoint) {
-				header.addClass("navbar-fixed-top");
-			} else {
-				header.removeClass("navbar-fixed-top");
-			}
-		});
-	});
+            if (yOffset >= triggerPoint) {
+                header.addClass("navbar-fixed-top");
+            } else {
+                header.removeClass("navbar-fixed-top");
+            }
+        });
+    });
 
 /*=========================================================================
         Mobile Menu
@@ -36,7 +36,7 @@
 /*=========================================================================
     Feature Carousel
 =========================================================================*/
-	$('#feature-carousel').owlCarousel({
+    $('#feature-carousel').owlCarousel({
         loop: true,
         margin: 15,
         autoplay: true,
@@ -46,24 +46,24 @@
         navText: ['<i class="arrow_carrot-left"></i>', '<i class="arrow_carrot-right"></i>'],
         dots: false,
         responsive : {
-			0 : {
-				items: 1,
-			},
-			480 : {
-				items: 2,
-			},
-			768 : {
-				items: 2,
-			},
-			992 : {
-				items: 4
-			}
-		}
+            0 : {
+                items: 1,
+            },
+            480 : {
+                items: 2,
+            },
+            768 : {
+                items: 2,
+            },
+            992 : {
+                items: 4
+            }
+        }
     }); 
 /*=========================================================================
     Testimonial Carousel
 =========================================================================*/
-	$('#testimonial-carousel').owlCarousel({
+    $('#testimonial-carousel').owlCarousel({
         loop: true,
         margin: 15,
         autoplay: true,
@@ -73,43 +73,27 @@
         navText: ['<i class="arrow_carrot-left"></i>', '<i class="arrow_carrot-right"></i>'],
         dots: false,
         responsive : {
-			0 : {
-				items: 1,
-			},
-			480 : {
-				items: 2,
-			},
-			768 : {
-				items: 2
-			},
-			992 : {
-				items: 3
-			}
-		}
+            0 : {
+                items: 1,
+            },
+            480 : {
+                items: 2,
+            },
+            768 : {
+                items: 2
+            },
+            992 : {
+                items: 3
+            }
+        }
     }); 
 
 /*=========================================================================
     Screenshot Carousel
 =========================================================================*/
-    function getSlide() {
-        var wW = $(window).width();
-        if (wW < 991) {
-            return 1;
-        } else if (wW < 1170) {
-            return 3;
-        } else {
-            return 5;
-        }
-    }
-    function getSlideSpace(){
-        var wW = $(window).width();
-        if (wW < 991) {
-            return 0;
-        }
-        return 20;
-    }    
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: getSlide(),
+        slidesPerView: 1, // Base configuration: 1 focused slide on mobile devices
+        spaceBetween: 0,  // Removes gaps so the image fits snugly into the mockup frame
         loop: true,
         autoplay: true,
         centeredSlides: true,
@@ -117,26 +101,38 @@
             nextEl: '.swiper-next',
             prevEl: '.swiper-prev',
         },
-        spaceBetween: getSlideSpace()
+        // Native responsive adjustments replacing old window width calculations
+        breakpoints: {
+            // When viewport width is >= 768px (Tablets)
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            // When viewport width is >= 1170px (Desktops)
+            1170: {
+                slidesPerView: 5,
+                spaceBetween: 20
+            }
+        }
     });  
              
 /*=========================================================================
     Active venobox
 =========================================================================*/
-	$('.img-popup').venobox({
-		numeratio: true,
-		infinigall: true
-	});                 
-             
+    $('.img-popup').venobox({
+        numeratio: true,
+        infinigall: true
+    });                 
+              
 /*=========================================================================
-	Initialize smoothscroll plugin
+    Initialize smoothscroll plugin
 =========================================================================*/
-	smoothScroll.init({
-		offset: 60
-	});
-	 
+    smoothScroll.init({
+        offset: 60
+    });
+     
 /*=========================================================================
-	Scroll To Top
+    Scroll To Top
 =========================================================================*/ 
     $(window).on( 'scroll', function () {
         if ($(this).scrollTop() > 100) {
@@ -147,15 +143,15 @@
     });
     
 /*=========================================================================
-	WOW Active
+    WOW Active
 =========================================================================*/ 
    new WOW().init();
     
 /*=========================================================================
-	MAILCHIMP
+    MAILCHIMP
 =========================================================================*/
     if ($('.subscribe-form').length>0) {
-        /*  MAILCHIMP  */
+        /* MAILCHIMP  */
         $('.subscribe-form').ajaxChimp({
             language: 'es',
             callback: mailchimpCallback,
@@ -185,27 +181,3 @@
     };   
 
 })(jQuery);
-
-// Locate your screenshots slider initialization and update it to match this:
-var screenshotSwiper = new Swiper('.screenshots-section .swiper-container', {
-    slidesPerView: 1, // Default constraint for mobile screens
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev',
-    },
-    // Add breakpoints configuration below to manage PC sizing
-    breakpoints: {
-        // When screen width is >= 576px (Tablets)
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        },
-        // When screen width is >= 992px (PC/Laptops)
-        992: {
-            slidesPerView: 4,   // Shows 4 screenshot columns side-by-side
-            spaceBetween: 30    // Adds clean breathing room spacing between them
-        }
-    }
-});

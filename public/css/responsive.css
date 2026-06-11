@@ -44,11 +44,24 @@
         display: none;
     }
     .swiper-container{
-        width: 260px;
+        width: 100%;
+        max-width: 270px; /* Matches device frame dimensions */
+        margin: 0 auto;
     }
     .swiper-container .swiper-slide{ text-align: center; }
     .swiper-container .swiper-slide img,
-    .swiper-container .swiper-slide-active img{ width: 80%!important; }
+    .swiper-container .swiper-slide-active img{ 
+        width: 100%!important; 
+        height: 100%!important;
+        object-fit: cover;
+    }
+    .mobile-mock {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 270 / 480; /* Maintains frame aspect ratio */
+        max-width: 270px;
+        margin: 0 auto;
+    }
     .swiper-container .swiper-next, 
     .swiper-container .swiper-prev{ display: none; }
     .content-info{
@@ -61,6 +74,9 @@
     .download-btn a{
         margin: 0 5px;
     }
+    .download-btn a img{
+        max-width: 130px;
+    }
     .download-content h2{
         font-size: 24px;
     }
@@ -70,14 +86,13 @@
     .hero-section{
         height: 570px;
     }
-
 }
 /* ---- End of max-width 992px CSS ---- */
 
 
 /* ---- Start of min-width 480px and max-width 768px CSS ---- */
 @media all and (min-width: 480px) and (max-width: 768px) {
-	
+    
 }
 /* ---- End of min-width 480px and max-width 768px CSS ---- */
 
@@ -107,7 +122,7 @@
     }
     .promo-section{ padding-top: 0; }
     .xs-padding{
-    	padding: 15px;
+        padding: 15px;
     }
     .section-heading h2{
         font-size: 30px;
@@ -169,7 +184,7 @@
 
 /* ---- Start of max-width 380px CSS ---- */
 @media all and (max-width: 380px) {
-	
+    
 }
 /* ---- End of max-width 380px CSS ---- */
 
@@ -178,16 +193,22 @@
    ========================================================================== */
 @media (max-width: 1199px) {
     .screenshots-section .swiper-container {
-        max-width: 300px; /* Laptops and smaller desktop monitors */
+        max-width: 300px;
     }
 }
 @media (max-width: 991px) {
     .screenshots-section .swiper-container {
-        max-width: 280px; /* Tablet-sized viewports */
+        max-width: 270px;
+    }
+    .screenshots-section .mobile-mock {
+        max-width: 270px;
     }
 }
 @media (max-width: 767px) {
     .screenshots-section .swiper-container {
-        max-width: 245px; /* Mobile devices */
+        max-width: 245px; /* Scales smoothly downward on compact screens */
+    }
+    .screenshots-section .mobile-mock {
+        max-width: 245px;
     }
 }
