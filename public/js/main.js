@@ -91,34 +91,32 @@
 /*=========================================================================
     Screenshot Carousel
 =========================================================================*/
-    function getSlide() {
-        var wW = $(window).width();
-        if (wW < 991) {
-            return 1;
-        } else if (wW < 1170) {
-            return 3;
-        } else {
-            return 5;
+var screenshotSwiper = new Swiper('.screenshots-section .swiper-container', {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+    },
+    // The breakpoints configuration manages responsive behavior automatically
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 30
         }
     }
-    function getSlideSpace(){
-        var wW = $(window).width();
-        if (wW < 991) {
-            return 0;
-        }
-        return 20;
-    }    
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: getSlide(),
-        loop: true,
-        autoplay: true,
-        centeredSlides: true,
-        navigation: {
-            nextEl: '.swiper-next',
-            prevEl: '.swiper-prev',
-        },
-        spaceBetween: getSlideSpace()
-    });  
+});
              
 /*=========================================================================
     Active venobox

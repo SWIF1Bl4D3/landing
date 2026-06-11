@@ -1,7 +1,7 @@
 /* Appium By IconicThemes */
 
 /* ==========================================================================
-    Table of Contets
+    Table of Contents
     ========================================================================== 
     
     1.0 Common Styles
@@ -18,7 +18,7 @@
     12.0 Blog Section
     13.0 Subscribe Section
     14.0 Footer Section
-    15.0 Scrool To Top
+    15.0 Scroll To Top
     
     ==========================================================================
     Appium App Landing Page
@@ -46,7 +46,7 @@ body{
 }
 h1, h2, h3, h4, h5, h6{
     font-family: 'Poppins', sans-serif;
-    -webkit-font-smoothing:antialiased;
+    -webkit-font-smoothing: antialiased;
     color: #222;
 }
 h1{
@@ -88,7 +88,7 @@ h5,h6{
 }
 img{
     border: none;
-    outline:none;
+    outline: none;
     max-width: 100%;
 }
 ul{
@@ -97,7 +97,6 @@ ul{
     padding: 0;
     margin: 0;
 }
-p, li, a, span{}
 p{
     font-size: 17px;
     color: #666;
@@ -116,12 +115,12 @@ textarea::-webkit-input-placeholder{
 }
 
 input:-moz-placeholder,
-textarea:-moz-placeholder{ /* Firefox 18- */
+textarea:-moz-placeholder{ 
    color: #555 !important;  
 }
 
 input::-moz-placeholder,
-textarea::-moz-placeholder{  /* Firefox 19+ */
+textarea::-moz-placeholder{  
    color: #555 !important;  
 }
 
@@ -231,7 +230,7 @@ button{
     transition: all .5s .2s ease;
 }
 .loader{
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 0;
     right: 0;
@@ -245,7 +244,7 @@ body.loaded #preloader{
     opacity: 0;
     visibility: hidden;
 }
-/*Battery*/
+/*Battery Loading Icon*/
 .battery{
     width: 28px;
     height: 14px;
@@ -281,7 +280,6 @@ body.loaded #preloader{
     100%{box-shadow: inset 30px 0px 0px #fff;}
 }
 /* Button Style */
-.btn_group{}
 .btn_group a{
     margin: 5px;
 }
@@ -289,7 +287,6 @@ body.loaded #preloader{
     margin-right: 15px;
     margin-bottom: 15px;
 }
-
 
 /* Section Heading */
 .section-heading h2{
@@ -308,11 +305,12 @@ body.loaded #preloader{
 }
 
 /* Transition Effect */
-a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
+a,a:hover, .overlay, img, .form-control, .form-control:hover, button{
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
+
 /* ==========================================================================
    Header Section
    ========================================================================== */
@@ -333,7 +331,6 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     border-bottom: 0;
     padding: 0;
 }
-
 .navbar-fixed-top ul.nav > li > a{
     color: #f0f0f0;
 }
@@ -355,9 +352,6 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
 }
 .navbar{
     border: medium none;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    -ms-border-radius: 0;
     border-radius: 0;
     margin: 0;
     position: relative;
@@ -395,8 +389,6 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     z-index: 999;
     padding: 0 15px;
 }
-ul.nav{}
-ul.nav > li{}
 ul.nav > li > a {
     color: rgba(255, 255, 255, 0.9);
     font-family: 'Poppins', sans-serif;
@@ -422,14 +414,14 @@ ul.nav > li > a.active{
     margin-top: 10px;
 }
 
-/*Mobile Menu */
+/* Mobile Menu */
 .menu-wrap{
     position: relative;
 }
 .slicknav_menu {
     background: none;
     padding: 4px 0;
-    display:none;
+    display: none;
     width: 100%;
     position: absolute;
     right: 0;
@@ -446,9 +438,6 @@ ul.nav > li > a.active{
 .slicknav_nav .slicknav_row, 
 .slicknav_nav a,
 .slicknav_nav a:hover{
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    -o-border-radius: 0;
     border-radius: 0;
 }
 .slicknav_nav .slicknav_row, 
@@ -474,8 +463,8 @@ ul.nav > li > a.active{
 }
 
 /* ==========================================================================
-    Hero Section
-    ========================================================================== */
+   Hero Section
+   ========================================================================== */
 .hero-section{
     background-color: #fff;
     height: 700px;
@@ -489,7 +478,6 @@ ul.nav > li > a.active{
     background-image: url(../img/hero-wave.png);
     background-position: top right;
     background-repeat: no-repeat;
-    -webkit-background-size: contain;
     background-size: contain;
     content: "";
     position: absolute;
@@ -532,38 +520,21 @@ ul.nav > li > a.active{
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
 }
-/*Mockup Animation*/
- @webkit-keyframes mock-animation {
-     0% {
-         -webkit-transform: translateY(-20px);
-         transform: translateY(-20px);
-    }
-     50% {
-         -webkit-transform: translateY(-10px);
-         transform: translateY(-10px);
-    }
-     100% {
-         -webkit-transform: translateY(-25px);
-         transform: translateY(-25px);
-    }
+/* Mockup Floating Animation */
+@-webkit-keyframes mock-animation {
+     0% { -webkit-transform: translateY(-20px); transform: translateY(-20px); }
+     50% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+     100% { -webkit-transform: translateY(-20px); transform: translateY(-20px); }
 }
- @keyframes mock-animation {
-     0% {
-         -webkit-transform: translateY(-20px);
-         transform: translateY(-20px);
-    }
-     50% {
-         -webkit-transform: translateY(-10px);
-         transform: translateY(-10px);
-    }
-     100% {
-         -webkit-transform: translateY(-20px);
-         transform: translateY(-20px);
-    }
+@keyframes mock-animation {
+     0% { -webkit-transform: translateY(-20px); transform: translateY(-20px); }
+     50% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+     100% { -webkit-transform: translateY(-20px); transform: translateY(-20px); }
 }
+
 /* ==========================================================================
-    Promo Section
-    ========================================================================== */
+   Promo Section
+   ========================================================================== */
 .promo-section{
     padding-top: 0;
     position: relative;
@@ -576,7 +547,7 @@ ul.nav > li > a.active{
 }
 .promo-content:hover{
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-    -webkit-transform: translateY(1.1);
+    -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
     transition: all 0.3s ease-in-out;
 }
@@ -597,9 +568,10 @@ ul.nav > li > a.active{
 .promo-content p{
     margin: 0;
 }
+
 /* ==========================================================================
-    Video Section
-    ========================================================================== */
+   Video Section
+   ========================================================================== */
 .video-section{
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
@@ -610,7 +582,6 @@ ul.nav > li > a.active{
     z-index: 1;
     padding: 150px 0;
 }
-
 .video-section:before{
     background: linear-gradient(-45deg, #D35400 50%, #922B00 100%);
     content: "";
@@ -622,7 +593,6 @@ ul.nav > li > a.active{
     opacity: 0.8;
     z-index: -1;
 }
-/*Play Btn*/
 .play-btn{
     display: block;
 }
@@ -661,49 +631,29 @@ ul.nav > li > a.active{
     -webkit-animation: circle_zoom 0.8s linear 0.4s infinite;
     animation: circle_zoom 0.8s linear 0.4s infinite;
 }
-
 @-webkit-keyframes circle_zoom {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: .6
-    }
-    100% {
-        -webkit-transform: scale(2);
-        transform: scale(2);
-        opacity: 0
-    }
+    0% { -webkit-transform: scale(1); transform: scale(1); opacity: .6 }
+    100% { -webkit-transform: scale(2); transform: scale(2); opacity: 0 }
 }
-
 @keyframes circle_zoom {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: .6
-    }
-    100% {
-        -webkit-transform: scale(2);
-        transform: scale(2);
-        opacity: 0
-    }
+    0% { -webkit-transform: scale(1); transform: scale(1); opacity: .6 }
+    100% { -webkit-transform: scale(2); transform: scale(2); opacity: 0 }
 }
 
 /* ==========================================================================
-    Feature Section
-    ========================================================================== */
+   Feature Section
+   ========================================================================== */
 .feature-section{
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
-
 .feature-content{
     border: 5px solid transparent;
     -moz-border-image: -moz-linear-gradient(-45deg, #D35400 50%, #922B00 100%);
     -webkit-border-image: -webkit-linear-gradient(-45deg, #D35400 50%, #922B00 100%);
     border-image: linear-gradient(-45deg, #D35400 50%, #922B00 100%);
     border-image-slice: 1;
-
     padding: 40px 15px;
     transition: all 0.3s ease-in-out;
 }
@@ -737,7 +687,6 @@ ul.nav > li > a.active{
     line-height: 24px;
     margin: 0;
 }
-.owl-nav{}
 .owl-nav div{
     display: block;
     background-image: linear-gradient(-45deg, #D35400 50%, #922B00 100%);
@@ -762,26 +711,22 @@ ul.nav > li > a.active{
 .owl-nav div:hover{
     opacity: 1;
 }
+
 /* ==========================================================================
-    Screenshots Section
-    ========================================================================== */
+   Screenshots Section Base Rules
+   ========================================================================== */
 .screenshots-section{
     background: linear-gradient(-45deg, #D35400 50%, #922B00 100%);
     padding-bottom: 53px;
 }
 .swiper-container {
     padding: 3.58rem 0 7rem 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 .swiper-container .swiper-slide{
     transform: scale(.65);
     opacity: 0.2;
-    -webkit-transition: all .3s ease;
     transition: all .3s ease
 }
 .swiper-container .swiper-slide-next, 
@@ -798,11 +743,10 @@ ul.nav > li > a.active{
     width: 212px;
     height: 376px;
     margin: 0 auto;
-    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .1), 0 2px 6px rgba(0, 0, 0, .03);
     box-shadow: 0 0 1px rgba(0, 0, 0, .1), 0 2px 6px rgba(0, 0, 0, .03);
 }
 
-/* White Device Frame Elements completely removed from behind sliders */
+/* Cleanup Frame Elements */
 .swiper-container .mobile-mock {
     margin: 0 auto;
     width: 100%;
@@ -843,10 +787,10 @@ ul.nav > li > a.active{
 .swiper-container .swiper-next:hover,
 .swiper-container .swiper-prev:hover{
     opacity: 1;
-    transition: all 0.3s ease-in-out;
 }
+
 /* ==========================================================================
-   10.0 Testimonial Section
+   Testimonial Section
    ========================================================================== */
 .testimonial-section{
     z-index: 1;
@@ -861,7 +805,7 @@ ul.nav > li > a.active{
     line-height: 26px;
 }
 .testi-footer img{
-    width:70px!important;
+    width: 70px!important;
     height: 70px;
     border-radius: 50%;
 }
@@ -918,11 +862,10 @@ ul.nav > li > a.active{
 .download-content .download-btn:hover{
     opacity: 0.8;
 }
+
 /* ==========================================================================
    Blog Section
    ========================================================================== */
-.blog-section{}
-.blog-box{}
 .blog-thumb{
     position: relative;
 }
@@ -971,7 +914,6 @@ ul.nav > li > a.active{
     color: #ddd;
     margin-right: 5px;
 }
-.blog-post{}
 .blog-content .read-more{
     background-color: #922B00;
     font-size: 14px;
@@ -989,9 +931,10 @@ ul.nav > li > a.active{
     background-color: #D35400;
     color: #fff;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-    -webkit-transform: translateY(1.1);
-    transition: all 0.2s ease-in-out;
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
 }
+
 /* ==========================================================================
    Subscribe Section
    ========================================================================== */
@@ -1025,30 +968,33 @@ ul.nav > li > a.active{
     display: block;
     color: #777;
     font-size: 14px;
-    line-height: 58px;
-    padding: 0 15px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
     float: left;
     width: 100%;
     outline: none;
     border: none;
-    border: none;
     border-radius: 30px;
-    padding-right: 110px;
+    padding-right: 120px;
+    box-sizing: border-box;
 }
 .subscribe-form .submit{
     position: absolute;
     right: 5px;
-    top: 0;
-    height: 60px;
-    width: 100px;
+    top: 5px;
+    height: 50px;
+    width: 110px;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
     color: #D35400;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 5;
 }
 .subscribe-form .submit:hover{
-    cursor: pointer;
-    color: #D35400;
+    color: #922B00;
 }
 #subscribe-result{
     display: none;
@@ -1118,11 +1064,11 @@ ul.nav > li > a.active{
     z-index: 999;
 }
 #scroll-to-top:hover{
-    background-color: #0bbf6c;
+    background-color: #922B00;
     color: #fff;
 }
 
-/* Base static holder style for desktop */
+/* Desktop structural adjustments */
 .hero-static-holder {
     display: inline-block;
     position: relative;
@@ -1131,8 +1077,6 @@ ul.nav > li > a.active{
     margin: 0 auto;
     z-index: 10;
 }
-
-/* Fix any template-level overrides interfering with the hero heights */
 .hero-inner {
     display: flex;
     flex-wrap: wrap;
@@ -1140,8 +1084,22 @@ ul.nav > li > a.active{
     min-height: 550px;
 }
 
+/* Global Swiper Layout Configurations */
+.screenshots-section .swiper-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.screenshots-section .swiper-slide img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 32px; 
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
 /* ==========================================================================
-   Mobile Optimization Overrides (Safe Additions)
+   Mobile Optimization Overrides (Responsive Breakpoints)
    ========================================================================== */
 @media (max-width: 991px) {
     .hero-section {
@@ -1150,7 +1108,7 @@ ul.nav > li > a.active{
         display: block;
     }
     .hero-section:before {
-        display: none; /* Removes giant decorative wave that breaks mobile layout width */
+        display: none; 
     }
     h1 {
         font-size: 34px !important;
@@ -1184,22 +1142,15 @@ ul.nav > li > a.active{
         display: block;
         top: 70px;
     }
+    /* Constrain container context on mobile screens so user loops focus cleanly */
+    .screenshots-section .swiper-container {
+        max-width: 270px;
+    }
 }
 
-/* ==========================================================================
-   OreGuide App Screenshot Carousel Responsiveness
-   ========================================================================== */
-.screenshots-section .swiper-container {
-    width: 100%;
-    max-width: 390px; /* Marginally increased size target on PC viewports */
-    margin: 0 auto;
-    position: relative;
-}
-
-.screenshots-section .swiper-slide img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain;
-    border-radius: 32px; /* Keeps corners clean inside the mockup frame */
-    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+@media (min-width: 992px) {
+    /* Allow sliders to fan out sideways across your screen track layout */
+    .screenshots-section .swiper-container {
+        max-width: 1140px;
+    }
 }
