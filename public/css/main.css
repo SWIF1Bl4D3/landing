@@ -895,7 +895,7 @@ ul.nav > li > a.active{
     z-index: 1;
 }
 .download-mockup{
-    background-image: url(../img/download-mockup.png);
+    background-image: url('../img/download-mockup.png');
     background-repeat: no-repeat;
     background-position: right top;
     content: "";
